@@ -17,9 +17,9 @@ function FlightSearchForm() {
   const { setFlightData } = useContext(FlightContext);
   const { switchToResult } = useScreen();
 
-  const baseUrl = "http://localhost:5000";
+  const baseUrl = "https://boiling-shelf-83756-11096d55fca5.herokuapp.com";
 
-  const fetchAirlines = async () => {
+  const fetchAirlines = async() => {
     try {
       const response = await axios.get(`${baseUrl}/api/airlines`);
       return response.data;
@@ -57,7 +57,7 @@ function FlightSearchForm() {
     setSuggestions([]);
   };
 
-  const handleGetFlightDetails = async (airline, flightNumber, date) => {
+  const handleGetFlightDetails = async(airline, flightNumber, date) => {
     try {
       if (!airline || !flightNumber) {
         return;

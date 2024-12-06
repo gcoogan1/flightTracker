@@ -57,7 +57,7 @@ const Result = () => {
                 {flightData.departure_city}
               </Card.Text>
             </Col>
-            <Col style={{ display: "flex", justifyItems: "flex-end" }}>
+            <Col style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
               <FaArrowRight style={{ color: "#888888" }} />
             </Col>
             <Col>
